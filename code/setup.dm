@@ -817,6 +817,3 @@ var/list/RESTRICTED_CAMERA_NETWORKS = list( //Those networks can only be accesse
 #define IS_UNATHI 4
 
 #define MAX_GEAR_COST 5 //Used in chargen for loadout limit.
-
-
-#define CHEM_SYNTH_ENERGY	500	//How much energy does it take to synthesize 1 unit of chemical, in J
