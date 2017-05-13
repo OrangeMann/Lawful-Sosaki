@@ -67,7 +67,9 @@
 		if("prefs")		return prefs.process_link(usr,href_list)
 		if("vars")		return view_var_Topic(href,href_list,hsrc)
 
-	..()	//redirect to hsrc.Topic()
+	var/client/hsrcAd = hsrc
+	if (!(hsrcAd))	return
+	hsrcAd.Topic(href, href_list)	//redirect to hsrc.Topic()
 
 /client/proc/handle_spam_prevention(var/message, var/mute_type)
 	if(config.automute_on && !holder && src.last_message == message)
