@@ -78,4 +78,6 @@
 	name = "Runtime"
 	desc = "Its fur has the look and feel of velvet, and its tail quivers occasionally."
 
-
+/mob/living/simple_animal/cat/Bombaster
+	name = "Bombaster"
+	desc = "Warning: high explosive fur"
