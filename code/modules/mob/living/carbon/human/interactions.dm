@@ -166,7 +166,7 @@ mob/living/carbon/human/proc/cum(mob/living/carbon/human/H as mob, mob/living/ca
 	var/turf/T
 
 	if (istype(H.species, /datum/species/xenos))
-		message = pick("извиваетс[ya] в приступе оргазма", "содрагаетс[ya], а затем резко расслабл[ya]етс[ya]")
+		message = pick("извиваетс[ya] в приступе оргазма", "содрогаетс[ya], а затем резко расслабл[ya]етс[ya]")
 		src.visible_message("<B>[src] [message].</B>")
 		if (multiorgasms == 0)
 			playsound(loc, "sound/voice/hiss6.ogg", 50, 0, -1)
