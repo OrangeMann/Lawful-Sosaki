@@ -124,6 +124,8 @@
 
 	pulse = handle_pulse()
 
+	handle_lust()
+
 	// Grabbing
 	for(var/obj/item/weapon/grab/G in src)
 		G.process()
