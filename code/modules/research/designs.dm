@@ -1681,7 +1681,7 @@ datum/design/bluespace_crystal
 	build_type = PROTOLATHE
 	materials = list("$gold" = 1500, "$diamond" = 3000, "$plasma" = 1500)
 	reliability_base = 100
-	build_path = "/obj/item/bluespace_crystal/artificial"
+	build_path = "/obj/item/weapon/bluespace_crystal/artificial"
 
 /////////////////////////////////////////
 /////////////////HUDs////////////////////
