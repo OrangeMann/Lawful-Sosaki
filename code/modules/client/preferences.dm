@@ -1277,7 +1277,7 @@ datum/preferences
 								//gender = FEMALE
 								user << "\blue Sorry, but female xenos are disabled due to new tonkotraps system."
 							else
-								gender = MALE
+								gender = FEMALE
 						else
 							gender = MALE
 
