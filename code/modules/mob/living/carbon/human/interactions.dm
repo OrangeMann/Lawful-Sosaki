@@ -159,6 +159,7 @@
 	var/multiorgasms = 0
 	var/lastmoan = 0
 	var/lastfinal = 0
+	var/erpdelay = 0
 
 mob/living/carbon/human/proc/cum(mob/living/carbon/human/H as mob, mob/living/carbon/human/P as mob, var/hole)
 	var/message = "кончает на пол!"
@@ -231,6 +232,9 @@ mob/living/carbon/human/proc/cum(mob/living/carbon/human/H as mob, mob/living/ca
 mob/living/carbon/human/proc/fuck(mob/living/carbon/human/H as mob, mob/living/carbon/human/P as mob, var/hole)
 	var/ya = "&#255;"
 	var/message = ""
+
+//	if (erpdelay > 0)
+//		return
 
 	if (hole == "vaglick")
 
@@ -591,3 +595,7 @@ mob/living/carbon/human/proc/handle_lust()
 		erpcooldown -= 1
 	if (erpcooldown < 0)
 		erpcooldown = 0
+	if (erpdelay > 0)
+		erpdelay -= 1
+	if (erpdelay < 0)
+		erpdelay = 0
