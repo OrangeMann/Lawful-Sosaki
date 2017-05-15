@@ -613,7 +613,7 @@ proc/get_damage_icon_part(damage_state, body_part)
 		else if(gloves.sprite_sheets && gloves.sprite_sheets[species.name])
 			standing = image("icon" = gloves.sprite_sheets[species.name], "icon_state" = "[t_state]")
 		else
-			if(gender == "FEMALE")
+			if(gender == FEMALE)
 				standing = image("icon" = 'icons/mob/hands_f.dmi', "icon_state" = "[t_state]")
 			else
 				standing = image("icon" = 'icons/mob/hands.dmi', "icon_state" = "[t_state]")
@@ -642,7 +642,7 @@ proc/get_damage_icon_part(damage_state, body_part)
 		else if(glasses.sprite_sheets && glasses.sprite_sheets[species.name])
 			overlays_standing[GLASSES_LAYER]= image("icon" = glasses.sprite_sheets[species.name], "icon_state" = "[glasses.icon_state]")
 		else
-			if(gender == "FEMALE")
+			if(gender == FEMALE)
 				overlays_standing[GLASSES_LAYER]= image("icon" = 'icons/mob/eyes_f.dmi', "icon_state" = "[glasses.icon_state]")
 			else
 				overlays_standing[GLASSES_LAYER]= image("icon" = 'icons/mob/eyes.dmi', "icon_state" = "[glasses.icon_state]")
@@ -668,7 +668,7 @@ proc/get_damage_icon_part(damage_state, body_part)
 				t_type = "[t_type]_l"
 				overlays_standing[EARS_LAYER] = image("icon" = l_ear.sprite_sheets[species.name], "icon_state" = "[t_type]")
 			else
-				if(gender == "FEMALE")
+				if(gender == FEMALE)
 					overlays_standing[EARS_LAYER] = image("icon" = 'icons/mob/ears_f.dmi', "icon_state" = "[t_type]")
 				else
 					overlays_standing[EARS_LAYER] = image("icon" = 'icons/mob/ears.dmi', "icon_state" = "[t_type]")
@@ -683,7 +683,7 @@ proc/get_damage_icon_part(damage_state, body_part)
 				t_type = "[t_type]_r"
 				overlays_standing[EARS_LAYER] = image("icon" = r_ear.sprite_sheets[species.name], "icon_state" = "[t_type]")
 			else
-				if(gender == "FEMALE")
+				if(gender == FEMALE)
 					overlays_standing[EARS_LAYER] = image("icon" = 'icons/mob/ears_f.dmi', "icon_state" = "[t_type]")
 				else
 					overlays_standing[EARS_LAYER] = image("icon" = 'icons/mob/ears.dmi', "icon_state" = "[t_type]")
@@ -701,7 +701,7 @@ proc/get_damage_icon_part(damage_state, body_part)
 		else if(shoes.sprite_sheets && shoes.sprite_sheets[species.name])
 			standing = image("icon" = shoes.sprite_sheets[species.name], "icon_state" = "[shoes.icon_state]")
 		else
-			if(gender == "FEMALE")
+			if(gender == FEMALE)
 				standing = image("icon" = 'icons/mob/feet_f.dmi', "icon_state" = "[shoes.icon_state]")
 			else
 				standing = image("icon" = 'icons/mob/feet.dmi', "icon_state" = "[shoes.icon_state]")
@@ -783,7 +783,7 @@ proc/get_damage_icon_part(damage_state, body_part)
 		else if(wear_suit.sprite_sheets && wear_suit.sprite_sheets[species.name])
 			standing = image("icon" = wear_suit.sprite_sheets[species.name], "icon_state" = "[wear_suit.icon_state]")
 		else
-			if(gender == "FEMALE")
+			if(gender == FEMALE)
 				standing = image("icon" = 'icons/mob/suit_f.dmi', "icon_state" = "[wear_suit.icon_state]")
 			else
 				standing = image("icon" = 'icons/mob/suit.dmi', "icon_state" = "[wear_suit.icon_state]")
@@ -848,7 +848,7 @@ proc/get_damage_icon_part(damage_state, body_part)
 		else if(back.sprite_sheets && back.sprite_sheets[species.name])
 			overlays_standing[BACK_LAYER] = image("icon" = back.sprite_sheets[species.name], "icon_state" = "[back.icon_state]")
 		else
-			if(gender == "FEMALE")
+			if(gender == FEMALE)
 				overlays_standing[BACK_LAYER] = image("icon" = 'icons/mob/back_f.dmi', "icon_state" = "[back.icon_state]")
 			else
 				overlays_standing[BACK_LAYER] = image("icon" = 'icons/mob/back.dmi', "icon_state" = "[back.icon_state]")
