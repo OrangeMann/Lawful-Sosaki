@@ -247,7 +247,8 @@ datum/preferences
 		dat += "(<a href='?_src_=prefs;preference=name;task=random'>Random Name</A>) "
 		dat += "(<a href='?_src_=prefs;preference=name'>Always Random Name: [be_random_name ? "Yes" : "No"]</a>)"
 		dat += "<br>"
-
+		if(gender == "Female" && species != "Human")
+			gender = MALE
 		dat += "<b>Gender:</b> <a href='?_src_=prefs;preference=gender'><b>[gender == MALE ? "Male" : "Female"]</b></a><br>"
 		dat += "<b>Age:</b> <a href='?_src_=prefs;preference=age;task=input'>[age]</a><br>"
 		dat += "<b>Spawn Point</b>: <a href='byond://?src=\ref[user];preference=spawnpoint;task=input'>[spawnpoint]</a>"
@@ -294,7 +295,7 @@ datum/preferences
 		dat += "<br><table><tr><td><b>Body</b> "
 		dat += "(<a href='?_src_=prefs;preference=all;task=random'>&reg;</A>)"
 		dat += "<br>"
-		//dat += "Species: <a href='byond://?src=\ref[user];preference=species;task=input'>[species]</a><br>"
+		dat += "Species: <a href='byond://?src=\ref[user];preference=species;task=input'>[species]</a><br>"
 		dat += "Secondary Language:<br><a href='byond://?src=\ref[user];preference=language;task=input'>[language]</a><br>"
 		dat += "Blood Type: <a href='byond://?src=\ref[user];preference=b_type;task=input'>[b_type]</a><br>"
 		dat += "Skin Tone: <a href='?_src_=prefs;preference=s_tone;task=input'>[-s_tone + 35]/220<br></a>"
@@ -1272,7 +1273,11 @@ datum/preferences
 				switch(href_list["preference"])
 					if("gender")
 						if(gender == MALE)
-							gender = FEMALE
+							if(species != "Human")
+								//gender = FEMALE
+								user << "\blue Sorry, but female xenos are disabled due to new tonkotraps system."
+							else
+								gender = FEMALE
 						else
 							gender = MALE
 
