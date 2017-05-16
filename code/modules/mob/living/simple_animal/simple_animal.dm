@@ -463,6 +463,6 @@
 	if(speak_emote.len)
 		verb = pick(speak_emote)
 
-	message = capitalize(trim_left(message))
+	message = sanitize(capitalize(trim_left(message)))
 
 	..(message, null, verb)
