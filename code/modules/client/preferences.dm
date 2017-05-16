@@ -247,8 +247,7 @@ datum/preferences
 		dat += "(<a href='?_src_=prefs;preference=name;task=random'>Random Name</A>) "
 		dat += "(<a href='?_src_=prefs;preference=name'>Always Random Name: [be_random_name ? "Yes" : "No"]</a>)"
 		dat += "<br>"
-		if(gender == "Female" && species != "Human")
-			gender = MALE
+
 		dat += "<b>Gender:</b> <a href='?_src_=prefs;preference=gender'><b>[gender == MALE ? "Male" : "Female"]</b></a><br>"
 		dat += "<b>Age:</b> <a href='?_src_=prefs;preference=age;task=input'>[age]</a><br>"
 		dat += "<b>Spawn Point</b>: <a href='byond://?src=\ref[user];preference=spawnpoint;task=input'>[spawnpoint]</a>"
@@ -1273,11 +1272,7 @@ datum/preferences
 				switch(href_list["preference"])
 					if("gender")
 						if(gender == MALE)
-							if(species != "Human")
-								//gender = FEMALE
-								user << "\blue Sorry, but female xenos are disabled due to new tonkotraps system."
-							else
-								gender = FEMALE
+							gender = FEMALE
 						else
 							gender = MALE
 

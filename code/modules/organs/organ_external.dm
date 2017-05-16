@@ -765,7 +765,6 @@ Note that amputating the affected organ does in fact remove the infection from t
 		return new /icon(owner.deform_icon, "[icon_name][gender ? "_[gender]" : ""]")
 
 	return new /icon(owner.race_icon, "[icon_name][gender ? "_[gender]" : ""]")
-//	return new /icon(owner.race_icon, "[icon_name]_[gender]")
 
 
 /datum/organ/external/proc/is_usable()
