@@ -1461,5 +1461,5 @@
 #include "code\ZAS\Zone.dm"
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
-#include "maps\anibay_and_sosaki.dmm"
+#include "maps\anikibay.dmm"
 // END_INCLUDE
