@@ -206,6 +206,7 @@
 	icon = 'icons/obj/animusposters.dmi'
 	icon_state = "clear"
 
-	/obj/sign/animusposter/EditorRus
+	/obj/structure/sign/animusposter/EditorRus
 		name = "Atarabashi Nihondzin"
 		desc = "Most effective detective in history of this station."
+		icon_state = "editor"

@@ -993,7 +993,7 @@
 "ate" = (/obj/structure/reagent_dispensers/watertank,/obj/item/weapon/storage/box/lights/bulbs,/turf/simulated/floor/plating,/area/maintenance/fpmaint)
 "atf" = (/obj/machinery/door/airlock/maintenance{req_access_txt = "12"},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/plating,/area/maintenance/fpmaint)
 "atg" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; pixel_y = 0},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/disposalpipe/segment,/turf/simulated/floor/plating,/area/maintenance/fpmaint)
-"ath" = (/obj/structure/table/woodentable,/obj/item/clothing/glasses/thermal,/obj/machinery/light/small{dir = 8},/turf/simulated/floor{icon_state = "grimy"},/area/security/detectives_office)
+"ath" = (/obj/structure/table/woodentable,/obj/item/clothing/glasses/thermal,/obj/machinery/light/small{dir = 8},/obj/structure/sign/animusposter/EditorRus{pixel_x = -32},/turf/simulated/floor{icon_state = "grimy"},/area/security/detectives_office)
 "ati" = (/obj/effect/landmark/start{name = "Detective"},/obj/structure/stool/bed/chair/comfy/black{dir = 4},/turf/simulated/floor/carpet{tag = "icon-carpet6-2"; icon_state = "carpet6-2"},/area/security/detectives_office)
 "atj" = (/obj/structure/table/woodentable,/obj/item/weapon/book/manual/security_space_law,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; pixel_y = 0},/turf/simulated/floor/carpet{tag = "icon-carpet14-10"; icon_state = "carpet14-10"},/area/security/detectives_office)
 "atk" = (/turf/simulated/floor/carpet{tag = "icon-carpet14-10"; icon_state = "carpet14-10"},/area/security/detectives_office)
