@@ -1058,7 +1058,7 @@
 					var/message = pick("Не хочетс[ya] мне...", "Как-то нет желани[ya]...", "Что-то не охота...", "Нет, не сейчас.")
 					H << message
 
-		erpdelay = 2
+		erpdelay = 1
 
 	..()
 	return
