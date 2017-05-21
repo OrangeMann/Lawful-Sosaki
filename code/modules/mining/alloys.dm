@@ -11,10 +11,8 @@
 /datum/alloy/plasteel
 	metaltag = "plasteel"
 	requires = list(
-		"platinum" = 1,
-		"coal" = 2,
-		"hematite" = 2
-		)
+		"hematite" = 2,
+		"plasma" = 1)
 	product_mod = 0.3
 	product = /obj/item/stack/sheet/plasteel
 
