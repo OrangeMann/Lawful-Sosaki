@@ -753,8 +753,12 @@ note dizziness decrements automatically in the mob's Life() proc.
 	if(restrained())					return 0
 	return 1
 
+/mob/proc/can_crawl()
+	return !(paralysis || stat || stunned || (status_flags & FAKEDEATH) || buckled)
+
 //Updates canmove, lying and icons. Could perhaps do with a rename but I can't think of anything to describe it.
 /mob/proc/update_canmove()
+	var/can_crawl = can_crawl()
 	if(istype(buckled, /obj/vehicle))
 		var/obj/vehicle/V = buckled
 		if(stat || weakened || paralysis || resting || sleeping || (status_flags & FAKEDEATH))
@@ -763,6 +767,7 @@ note dizziness decrements automatically in the mob's Life() proc.
 			pixel_y = V.mob_offset_y - 5
 		else
 			lying = 0
+			canmove = can_crawl
 			canmove = 1
 			pixel_y = V.mob_offset_y
 	else if(buckled && (!buckled.movable))
@@ -791,6 +796,7 @@ note dizziness decrements automatically in the mob's Life() proc.
 		canmove = has_limbs
 
 	if(lying)
+		canmove = can_crawl
 		density = 0
 		drop_l_hand()
 		drop_r_hand()
