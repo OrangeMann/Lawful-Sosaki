@@ -199,14 +199,3 @@
 	name = "\improper Escape Arm"
 	desc = "A direction sign, pointing out which way the escape shuttle dock is."
 	icon_state = "direction_evac"
-
-/obj/structure/sign/animusposter
-	name = "Clear Portrait"
-	desc = "Stay Animus. Stay Robust."
-	icon = 'icons/obj/animusposters.dmi'
-	icon_state = "clear"
-
-	/obj/structure/sign/animusposter/EditorRus
-		name = "Atarabashi Nihondzin"
-		desc = "Most effective detective in history of this station."
-		icon_state = "editor"
