@@ -28,7 +28,7 @@
 
 	if (istype(A,/mob/living/carbon))
 		var/mob/living/carbon/M = A
-		if(M.lying)        return
+//		if(M.lying)        return
 		dirt++
 		var/obj/effect/decal/cleanable/dirt/dirtoverlay = locate(/obj/effect/decal/cleanable/dirt, src)
 		if (dirt >= 50)
@@ -97,10 +97,10 @@
 					H.track_blood--
 
 			if (bloodDNA)
-				src.AddTracks(/obj/effect/decal/cleanable/blood/tracks/footprints,bloodDNA,H.dir,0,bloodcolor) // Coming
-				var/turf/simulated/from = get_step(H,reverse_direction(H.dir))
+				src.AddTracks(M.get_footprint(), bloodDNA, M.dir, 0, bloodcolor) // Coming
+				var/turf/simulated/from = get_step(M, reverse_direction(M.dir))
 				if(istype(from) && from)
-					from.AddTracks(/obj/effect/decal/cleanable/blood/tracks/footprints,bloodDNA,0,H.dir,bloodcolor) // Going
+					from.AddTracks(M.get_footprint(), bloodDNA, 0, M.dir, bloodcolor) // Going
 
 				bloodDNA = null
 

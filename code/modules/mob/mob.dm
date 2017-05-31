@@ -757,7 +757,7 @@ note dizziness decrements automatically in the mob's Life() proc.
 	return !(paralysis || stat || stunned || (status_flags & FAKEDEATH) || buckled)
 
 //Updates canmove, lying and icons. Could perhaps do with a rename but I can't think of anything to describe it.
-/mob/proc/update_canmove()
+/mob/proc/update_canmove(delay_action_updates = 0, force_lying_update = 0)
 	var/can_crawl = can_crawl()
 	if(istype(buckled, /obj/vehicle))
 		var/obj/vehicle/V = buckled

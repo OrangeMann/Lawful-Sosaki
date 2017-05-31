@@ -1736,3 +1736,11 @@
 			return
 		H << "\red Your nose begins to bleed..."
 		H.drip(1)
+
+/mob/living/carbon/human/get_footprint()//returns the typepath of the footprint/bloodt trail decal that the mob currently uses
+	if(lying)
+		return /obj/effect/decal/cleanable/blood/tracks/trail
+	else if(shoes)
+		return /obj/effect/decal/cleanable/blood/tracks/footprints
+	else
+		return species.footprints

@@ -16,6 +16,7 @@
 	var/unarmed_type = /datum/unarmed_attack
 	var/secondary_langs = list() // The names of secondary languages that are available to this species.
 	var/mutantrace               // Safeguard due to old code.
+	var/footprints = /obj/effect/decal/cleanable/blood/tracks/footprints
 
 	var/breath_type = "oxygen"   // Non-oxygen gas breathed, if any.
 	var/poison_type = "plasma"   // Poisonous air.
