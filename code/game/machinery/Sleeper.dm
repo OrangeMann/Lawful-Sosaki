@@ -133,6 +133,13 @@
 		src.add_fingerprint(usr)
 	return
 
+/obj/machinery/sleeper/MouseDrop_T(var/mob/target, var/mob/user)
+	if(!CanMouseDrop(target, user))
+		return
+	if(target.buckled)
+		usr << "<span class='warning'>Unbuckle the subject before attempting to move them.</span>"
+		return
+	go_in(target, user)
 
 /obj/machinery/sleep_console/power_change()
 	return
@@ -421,3 +428,33 @@
 			src.add_fingerprint(usr)
 			return
 		return
+
+/obj/machinery/sleeper/proc/go_in(var/mob/M, var/mob/user)
+	if(!M)
+		return
+	if(stat & (BROKEN|NOPOWER))
+		return
+	if(occupant)
+		usr << "<span class='warning'>\The [src] is already occupied.</span>"
+		return
+
+	if(M == user)
+		visible_message("\The [user] starts climbing into \the [src].")
+	else
+		visible_message("\The [user] starts putting [M] into \the [src].")
+
+	if(do_after(user, 20))
+		if(occupant)
+			usr << "<span class='warning'>\The [src] is already occupied.</span>"
+			return
+		M.stop_pulling()
+		if(M.client)
+			M.client.perspective = EYE_PERSPECTIVE
+			M.client.eye = src
+		M.forceMove(src)
+		src.icon_state = "sleeper_1"
+		if(orient == "RIGHT")
+			icon_state = "sleeper_1-r"
+//		update_use_power(2)
+		occupant = M
+		update_icon()
