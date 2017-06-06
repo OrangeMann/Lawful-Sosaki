@@ -3324,7 +3324,7 @@
 "blV" = (/obj/structure/table,/obj/machinery/microwave{pixel_x = -3; pixel_y = 6},/turf/simulated/floor{icon_state = "cafeteria"; dir = 5},/area/crew_quarters/kitchen)
 "blW" = (/obj/structure/sink/kitchen{pixel_y = 28},/turf/simulated/floor{icon_state = "cafeteria"; dir = 5},/area/crew_quarters/kitchen)
 "blX" = (/turf/simulated/floor{icon_state = "cafeteria"; dir = 5},/area/crew_quarters/kitchen)
-"blY" = (/obj/machinery/vending/dinnerware,/obj/machinery/light{dir = 1; icon_state = "tube1"},/obj/machinery/door_control{id = "chef"; name = "Kitchen Shutters"; pixel_x = 0; pixel_y = -32},/turf/simulated/floor{icon_state = "cafeteria"; dir = 5},/area/crew_quarters/kitchen)
+"blY" = (/obj/machinery/vending/dinnerware,/obj/machinery/light{dir = 1; icon_state = "tube1"},/obj/machinery/door_control{id = "chef"; name = "Kitchen Shutters"; pixel_x = 26; pixel_y = 0},/turf/simulated/floor{icon_state = "cafeteria"; dir = 5},/area/crew_quarters/kitchen)
 "blZ" = (/obj/machinery/power/apc{dir = 1; name = "Bar APC"; pixel_y = 24},/obj/structure/cable{icon_state = "0-4"; d2 = 4},/turf/simulated/floor{icon_state = "bar"},/area/crew_quarters/cafeteria)
 "bma" = (/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor{icon_state = "bar"},/area/crew_quarters/cafeteria)
 "bmb" = (/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_x = 0},/turf/simulated/floor{icon_state = "bar"},/area/crew_quarters/cafeteria)
