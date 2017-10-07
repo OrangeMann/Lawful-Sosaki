@@ -146,6 +146,8 @@
 				del(src)
 
 /obj/structure/closet/bullet_act(var/obj/item/projectile/Proj)
+	if(Proj.damage_type == HALLOSS)
+		return
 	health -= Proj.damage
 	..()
 	if(health <= 0)

@@ -826,7 +826,11 @@
 ///////Interactions!!///////
 	if(href_list["interaction"])
 
-		if (usr.stat == DEAD || usr.stat == UNCONSCIOUS || usr.restrained())
+		if (usr.stat == DEAD || usr.stat == UNCONSCIOUS || usr.restrained() || weakened || paralysis || stunned)
+			src << "\red You can't fuck in your current state."
+			return
+
+		if (erpdelay > 0)
 			return
 
 		//CONDITIONS
@@ -1053,6 +1057,8 @@
 				else
 					var/message = pick("Не хочетс[ya] мне...", "Как-то нет желани[ya]...", "Что-то не охота...", "Нет, не сейчас.")
 					H << message
+
+		erpdelay = 1
 
 	..()
 	return
@@ -1730,3 +1736,11 @@
 			return
 		H << "\red Your nose begins to bleed..."
 		H.drip(1)
+
+/mob/living/carbon/human/get_footprint()//returns the typepath of the footprint/bloodt trail decal that the mob currently uses
+	if(lying)
+		return /obj/effect/decal/cleanable/blood/tracks/trail
+	else if(shoes)
+		return /obj/effect/decal/cleanable/blood/tracks/footprints
+	else
+		return species.footprints

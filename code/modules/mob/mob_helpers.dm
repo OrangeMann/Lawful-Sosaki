@@ -333,7 +333,7 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 
 
 /proc/shake_camera(mob/M, duration, strength=1)
-	if(!M || !M.client || M.shakecamera)  
+	if(!M || !M.client || M.shakecamera)
 		return
 	M.shakecamera = 1
 	spawn(1)
@@ -415,3 +415,6 @@ var/list/intents = list("help","disarm","grab","hurt")
 				hud_used.action_intent.icon_state = "harm"
 			else
 				hud_used.action_intent.icon_state = "help"
+
+/mob/proc/get_footprint()//returns the typepath of the footprint/bloodt trail decal that the mob currently uses
+	return null

@@ -159,3 +159,15 @@ var/global/list/image/fluidtrack_cache=list()
 	gender = PLURAL
 	random_icon_states = null
 	amount = 0
+
+/obj/effect/decal/cleanable/blood/tracks/footprints/claw
+	coming_state = "claw1"
+	going_state = "claw2"
+
+/obj/effect/decal/cleanable/blood/tracks/trail
+	name = "wet trail"
+	desc = "Whoops..."
+	coming_state = "trail1"
+	going_state  = "trail2"
+	desc = "Looks like something crawled through here..."
+	random_icon_states = null

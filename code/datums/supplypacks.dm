@@ -1288,6 +1288,15 @@ var/list/all_supply_groups = list("Operations","Security","Hospitality","Enginee
 					/obj/item/weapon/stock_parts/matter_bin,
 					/obj/item/weapon/circuitboard/pacman/super)
 
+/datum/supply_packs/plasteel_pack
+	name = "Plasteel pack"
+	cost = 30
+	containername = "Plasteel crate"
+	containertype = /obj/structure/closet/crate
+	group = "Engineering"
+	contains = list(/obj/item/stack/sheet/plasteel{amount = 20},
+					/obj/item/stack/sheet/plasteel{amount = 20})
+
 /datum/supply_packs/witch
 	name = "Witch costume"
 	containername = "Witch costume"

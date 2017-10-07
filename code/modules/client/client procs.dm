@@ -24,10 +24,14 @@
 	if(!usr || usr != mob)	//stops us calling Topic for somebody else's client. Also helps prevent usr=null
 		return
 
-	//Reduces spamming of links by dropping calls that happen during the delay period
-	if(next_allowed_topic_time > world.time)
-		return
-	next_allowed_topic_time = world.time + TOPIC_SPAM_DELAY
+	#if defined(TOPIC_DEBUGGING)
+	log_debug("[src]'s Topic: [href] destined for [hsrc].")
+
+	if(href_list["nano_err"]) //nano throwing errors
+		log_debug("## NanoUI, Subject [src]: " + html_decode(href_list["nano_err"]))//NANO DEBUG HOOK
+
+
+	#endif
 
 	//search the href for script injection
 	if( findtext(href,"<script",1,0) )
@@ -52,7 +56,7 @@
 		if(mute_irc)
 			usr << "<span class='warning'You cannot use this as your client has been muted from sending messages to the admins on IRC</span>"
 			return
-		cmd_admin_irc_pm()
+		cmd_admin_irc_pm(href_list["irc_msg"])
 		return
 
 

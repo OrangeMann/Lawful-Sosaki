@@ -57,6 +57,9 @@
 	if(mRun in mutations)
 		tally = 0
 
+	if(weakened || resting)
+		tally += 30//no crawlrunning
+
 	return (tally+config.human_delay)
 
 /mob/living/carbon/human/Process_Spacemove(var/check_drift = 0)

@@ -236,7 +236,7 @@
 			if("run")
 				if(mob.drowsyness > 0)
 					move_delay += 6
-				move_delay += 1+config.run_speed
+				move_delay += -1+config.run_speed
 			if("walk")
 				move_delay += 7+config.walk_speed
 		move_delay += mob.movement_delay()
@@ -307,6 +307,9 @@
 			step(mob, pick(cardinal))
 		else
 			. = ..()
+		//this is so retarded, I'm so sorry. The only purpose of the proc here is to update one's animation if they change their dir while crawling
+		if(mob.lying)
+			mob.update_canmove(force_lying_update = 1)
 
 		moving = 0
 

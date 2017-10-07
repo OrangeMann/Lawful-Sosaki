@@ -394,7 +394,7 @@
 
 			if(href_list["amount"])
 				var/id = href_list["add"]
-				var/amount = text2num(href_list["amount"])
+				var/amount = isgoodnumber(text2num(href_list["amount"]))
 				R.trans_id_to(src, id, amount)
 
 		else if (href_list["addcustom"])
@@ -408,7 +408,7 @@
 
 			if(href_list["amount"])
 				var/id = href_list["remove"]
-				var/amount = text2num(href_list["amount"])
+				var/amount = isgoodnumber(text2num(href_list["amount"]))
 				if(mode)
 					reagents.trans_id_to(beaker, id, amount)
 				else
@@ -575,15 +575,7 @@
 
 /obj/machinery/chem_master/proc/isgoodnumber(var/num)
 	if(isnum(num))
-		if(num > 200)
-			num = 200
-		else if(num < 0)
-			num = 1
-		else
-			num = round(num)
-		return num
-	else
-		return 0
+		return Clamp(round(num), 0, 200)
 
 
 
